@@ -20,7 +20,7 @@ int8_t ROS_LIB_SendVectorToRos(RosPub *rosPub, double x, double y, double z)
     msg.x = x;
     msg.y = y;
     msg.z = z;
-    ROS_INFO("send ROS Vector3 msg: (%f,%f,%f), rostimenow.toSec: %f", msg.x, msg.y, msg.x , ros::Time::now().toSec());
+    ROS_INFO("send ROS Vector3 msg: (%f,%f,%f), rostimenow.toSec: %f", msg.x, msg.y, msg.z , ros::Time::now().toSec());
     rosPub->publisher.publish(msg);
     return 0;
 }
